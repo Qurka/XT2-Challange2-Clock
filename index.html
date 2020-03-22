@@ -4,15 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interplanetary Transport System Clock</title>
-    <script src="script.js"></script>
-    <link id="pagestyle" href="default.css" rel="stylesheet" type="text/css" />
+    <link href="default.css" rel="stylesheet" type="text/css" />
   </head>
   <body onload="realtimeClock()">
+    <script src="script.js"></script>
+
     <main>
-      <img class="sun" id="sun" src="Images/sun.png" alt="a shining sun" />
-      <img class="trees" id="trees" src="Images/trees.png" alt="a forest" />
+      <div class="container">
+        <img class="sun" id="sun" src="Images/sun.png" alt="a shining sun" />
+        <img class="moon" id="sun" src="Images/moon.png" alt="shining moon" />
+      </div>
+      <div class="container1">
+        <img class="trees" id="trees" src="Images/trees.png" alt="aforest" />
+      </div>
       <section>
         <div class="clock-container">
+          <div id="timeofday" class="timeofday">day</div>
+          <div id="message" class="message">message</div>
           <div id="clock"></div>
         </div>
       </section>

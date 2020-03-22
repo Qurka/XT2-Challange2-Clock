@@ -5,10 +5,10 @@ function realtimeClock() {
   var seconds = rtClock.getSeconds();
 
   // Add AM and PM system
-  var amPm = hours < 12 ? "AM" : "PM";
+  var amPm = hours < 24 ? "AM" : "PM";
 
   // Convert the hours component to 12-hour format
-  hours = hours > 12 ? hours - 12 : hours;
+  // hours = hours > 12 ? hours - 12 : hours;
 
   // Pad the hours, minutes and seconds with leadind zeros
   hours = ("0" + hours).slice(-2);
@@ -19,4 +19,25 @@ function realtimeClock() {
   document.getElementById("clock").innerHTML =
     hours + " : " + minutes + " : " + seconds + " " + amPm;
   var t = setTimeout(realtimeClock, 500);
+
+  if ((hours => 05, hours <= 19)) {
+    document.body.style.background = "#c0e2f1";
+    document.getElementById("moon")style.visibility = "hidden";
+    document.getElementById("sun")style.visibility = "visible";
+    document.getElementById("timeofday")style.innerHTML = "Goodday";
+    document.getElementById("message")style.innerHTML = "Time To Explore!";
+  } else {
+    document.body.style.background = "#3F3D56";
+    document.getElementById("moon")style.visibility = "visible";
+    document.getElementById("sun")style.visibility = "hidden";
+    document.getElementById("timeofday")style.innerHTML = "Goodnight";
+    document.getElementById("message")style.innerHTML = "Time To Sleep!";
+  }
+  if ((h > 00, h < 05)) {
+    document.body.style.background = "#3F3D56";
+    document.getElementById("moon")style.visibility = "visible";
+    document.getElementById("sun")style.visibility = "hidden";
+    document.getElementById("timeofday")style.innerHTML = "Goodnight";
+    document.getElementById("message")style.innerHTML = "Time To Sleep";
+  }
 }
