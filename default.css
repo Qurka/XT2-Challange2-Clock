@@ -61,6 +61,20 @@ body {
 }
 
 /* Animations */
+#sun {
+  animation: sun 60s infinite linear;
+}
+
+@keyframes sun {
+  from {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  /* If you just right, the number with a minus in front -850px */
+  to {
+    transform: translate3d(850px, 0px, 0px);
+  }
+}
+
 #moon {
   animation: moon 60s infinite linear;
 }
