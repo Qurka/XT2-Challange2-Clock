@@ -1,0 +1,45 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #c0e2f1;
+}
+
+#clock {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #2F2E41;
+  font-size: 10rem;
+  font-family: monospace;
+}
+
+/* SVG
+.day-svg {
+  display: flex;
+  justify-content: center;
+  background-color: #c0e2f1;
+}
+
+/* SVG Animations */
+/* #sun {
+  animation: moon 12s ease;
+  transform-origin: center;
+}
+
+@keyframes sun {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+} */ */
