@@ -21,16 +21,27 @@ function realtimeClock() {
   var t = setTimeout(realtimeClock, 500);
 
   if ((hours => 05, hours <= 19)) {
-    document.body.style.background = "#c0e2f1";
+    document.body.style.backgroundColor = "#c0e2f1";
     document.getElementById("moon").style.visibility = "hidden";
     document.getElementById("sun").style.visibility = "visible";
-    document.getElementById("timeofday").style.innerHTML = "Goodday";
-    document.getElementById("message").style.innerHTML = "Time To Explore!";
+    document.getElementById("stars").style.visibility = "hidden";
+    document.getElementById("timeofday").innerHTML = "Goodday";
+    document.getElementById("message").innerHTML = "Time To Explore!";
   } else {
-    document.body.style.background = "#3F3D56";
+    document.body.style.backgroundColor = "#2F2E41";
     document.getElementById("moon").style.visibility = "visible";
     document.getElementById("sun").style.visibility = "hidden";
-    document.getElementById("timeofday").style.innerHTML = "Goodnight";
-    document.getElementById("message").style.innerHTML = "Time To Sleep!";
+    document.getElementById("stars").style.visibility = "visible";
+    document.getElementById("timeofday").innerHTML = "Goodnight";
+    document.getElementById("message").innerHTML = "Time To Sleep!";
+  }
+
+  if ((hours => 00, hours <= 05)) {
+    document.body.style.backgroundColor = "#2F2E41";
+    document.getElementById("sun").style.visibility = "hidden";
+    document.getElementById("timeofday").innerHTML = "Goodnight";
+    document.getElementById("stars").style.visibility = "visible";
+    document.getElementById("message").innerHTML = "Time To Sleep!";
+    document.getElementById("moon").style.visibility = "visible";
   }
 }
