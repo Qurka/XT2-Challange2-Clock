@@ -17,6 +17,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1;
+  margin: 1rem;
 }
 
 .sun {
@@ -130,31 +131,6 @@ body {
 }
 
 @media only screen and (min-width: 500px) {
-  .sun {
-    width: 5%;
-    height: auto;
-  }
-
-  .cloud {
-    width: 15%;
-    height: auto;
-    /* z-index: 2; */
-  }
-
-  .trees {
-    width: 40%;
-    height: auto;
-  }
-
-  .stars {
-    position: absolute;
-    left: 30%;
-    margin-left: -30px;
-    top: 25%;
-    margin-top: -25px;
-    z-index: 0;
-  }
-
   .timeofday {
     display: flex;
     justify-content: center;
@@ -233,4 +209,167 @@ body {
       transform: translate3d(-80%, 0, 0);
     }
   }
+}
+
+@media only screen and (min-width: 900px) {
+  .timeofday {
+    display: flex;
+    justify-content: center;
+    font-size: 8rem;
+    color: white;
+    font-weight: bold;
+    font-family: monospace;
+  }
+
+  .message {
+    display: flex;
+    justify-content: center;
+    font-size: 8rem;
+    color: white;
+    font-family: monospace;
+  }
+
+  #clock {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 8rem;
+    font-family: monospace;
+  }
+
+  /* Animations */
+  #cloud {
+    animation: 10s cloud infinite alternate ease-in-out;
+  }
+
+  @keyframes cloud {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(80%, 0, 0);
+    }
+  }
+
+  #sun {
+    animation: 20s cloud infinite alternate ease-in-out;
+  }
+
+  @keyframes sun {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(80%, 0, 0);
+    }
+  }
+
+  #moon {
+    animation: 20s cloud infinite alternate ease-in-out;
+  }
+
+  @keyframes moon {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(80%, 0, 0);
+    }
+  }
+
+  #stars {
+    animation: 10s cloud infinite alternate ease-in-out;
+  }
+
+  @keyframes stars {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-80%, 0, 0);
+    }
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .timeofday {
+    display: flex;
+    justify-content: center;
+    font-size: 10rem;
+    color: white;
+    font-weight: bold;
+    font-family: monospace;
+  }
+
+  .message {
+    display: flex;
+    justify-content: center;
+    font-size: 10rem;
+    color: white;
+    font-family: monospace;
+  }
+
+  #clock {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 10rem;
+    font-family: monospace;
+  }
+
+  /* Animations */
+  #cloud {
+    animation: 10s cloud infinite alternate ease-in-out;
+  }
+
+  @keyframes cloud {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(80%, 0, 0);
+    }
+  }
+
+  #sun {
+    animation: 20s cloud infinite alternate ease-in-out;
+  }
+
+  @keyframes sun {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(80%, 0, 0);
+    }
+  }
+
+  #moon {
+    animation: 20s cloud infinite alternate ease-in-out;
+  }
+
+  @keyframes moon {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(80%, 0, 0);
+    }
+  }
+
+  #stars {
+    animation: 10s cloud infinite alternate ease-in-out;
+  }
+
+  @keyframes stars {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-80%, 0, 0);
+    }
+  }
+}
 }
