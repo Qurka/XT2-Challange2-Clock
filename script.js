@@ -21,8 +21,9 @@ function realtimeClock() {
   var t = setTimeout(realtimeClock, 500);
 
   if ((hours => 05, hours <= 19)) {
-    document.body.style.backgroundColor = "#c0e2f1";
+    document.body.style.backgroundColor = "#A2D9F0";
     document.getElementById("moon").style.visibility = "hidden";
+    document.getElementById("cloud").style.visibility = "visible";
     document.getElementById("sun").style.visibility = "visible";
     document.getElementById("stars").style.visibility = "hidden";
     document.getElementById("timeofday").innerHTML = "Goodday";
@@ -30,6 +31,7 @@ function realtimeClock() {
   } else {
     document.body.style.backgroundColor = "#2F2E41";
     document.getElementById("moon").style.visibility = "visible";
+    document.getElementById("cloud").style.visibility = "hidden";
     document.getElementById("sun").style.visibility = "hidden";
     document.getElementById("stars").style.visibility = "visible";
     document.getElementById("timeofday").innerHTML = "Goodnight";
@@ -39,6 +41,7 @@ function realtimeClock() {
   if ((hours => 00, hours <= 05)) {
     document.body.style.backgroundColor = "#2F2E41";
     document.getElementById("sun").style.visibility = "hidden";
+    document.getElementById("cloud").style.visibility = "hidden";
     document.getElementById("timeofday").innerHTML = "Goodnight";
     document.getElementById("stars").style.visibility = "visible";
     document.getElementById("message").innerHTML = "Time To Sleep!";

@@ -14,15 +14,31 @@ body {
 
 .container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
 }
 
+.sun {
+  width: 5%;
+  height: auto;
+}
+
+.cloud {
+  width: 15%;
+  height: auto;
+  /* z-index: 2; */
+}
 .container1 {
   display: flex;
   position: relative;
   justify-content: center;
   z-index: 1;
+}
+
+.trees {
+  width: 40%;
+  height: auto;
 }
 
 .stars {
@@ -37,7 +53,7 @@ body {
 .timeofday {
   display: flex;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 3rem;
   color: white;
   font-weight: bold;
   font-family: monospace;
@@ -46,7 +62,7 @@ body {
 .message {
   display: flex;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 3rem;
   color: white;
   font-family: monospace;
 }
@@ -56,112 +72,78 @@ body {
   display: flex;
   justify-content: center;
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: monospace;
 }
 
 /* Animations */
+#cloud {
+  animation: 10s cloud infinite alternate ease-in-out;
+}
+
+@keyframes cloud {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
 #sun {
-  animation: sun 60s infinite linear;
+  animation: 20s cloud infinite alternate ease-in-out;
 }
 
 @keyframes sun {
   from {
-    transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0, 0, 0);
   }
-  /* If you just right, the number with a minus in front -850px */
   to {
-    transform: translate3d(850px, 0px, 0px);
+    transform: translate3d(100%, 0, 0);
   }
 }
 
 #moon {
-  animation: moon 60s infinite linear;
+  animation: 20s cloud infinite alternate ease-in-out;
 }
 
 @keyframes moon {
   from {
-    transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0, 0, 0);
   }
-  /* If you just right, the number with a minus in front -850px */
   to {
-    transform: translate3d(850px, 0px, 0px);
+    transform: translate3d(100%, 0, 0);
   }
 }
 
 #stars {
-  animation: stars 60s infinite linear;
+  animation: 10s cloud infinite alternate ease-in-out;
 }
 
 @keyframes stars {
   from {
-    transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0, 0, 0);
   }
-  /* If you just right, the number with a minus in front -850px */
   to {
-    transform: translate3d(-850px, 0px, 0px);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 
-@media only screen and (min-width: 550px) and (max-width: 775px) {
-  .trees {
-    width: 50%;
+@media only screen and (min-width: 500px) {
+  .sun {
+    width: 5%;
     height: auto;
   }
 
-  .timeofday {
-    display: flex;
-    justify-content: center;
-    font-size: 5rem;
-    color: white;
-    font-weight: bold;
-    font-family: monospace;
+  .cloud {
+    width: 15%;
+    height: auto;
+    /* z-index: 2; */
   }
 
-  .message {
-    display: flex;
-    justify-content: center;
-    font-size: 5rem;
-    color: white;
-    font-family: monospace;
-  }
-
-  #clock {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    color: white;
-    font-size: 5rem;
-    font-family: monospace;
-  }
-}
-
-@media only screen and (min-width: 756px) {
-  html {
-    font-size: 62.5%;
-  }
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  body {
-    background-color: white;
-  }
-
-  .container {
-    display: flex;
-    justify-content: flex-start;
-    z-index: 1;
-  }
-
-  .container1 {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    z-index: 1;
+  .trees {
+    width: 40%;
+    height: auto;
   }
 
   .stars {
@@ -176,7 +158,7 @@ body {
   .timeofday {
     display: flex;
     justify-content: center;
-    font-size: 8rem;
+    font-size: 5rem;
     color: white;
     font-weight: bold;
     font-family: monospace;
@@ -185,7 +167,7 @@ body {
   .message {
     display: flex;
     justify-content: center;
-    font-size: 8rem;
+    font-size: 5rem;
     color: white;
     font-family: monospace;
   }
@@ -195,50 +177,60 @@ body {
     display: flex;
     justify-content: center;
     color: white;
-    font-size: 10rem;
+    font-size: 5rem;
     font-family: monospace;
   }
 
   /* Animations */
+  #cloud {
+    animation: 10s cloud infinite alternate ease-in-out;
+  }
+
+  @keyframes cloud {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(80%, 0, 0);
+    }
+  }
+
   #sun {
-    animation: sun 60s infinite linear;
+    animation: 20s cloud infinite alternate ease-in-out;
   }
 
   @keyframes sun {
     from {
-      transform: translate3d(0px, 0px, 0px);
+      transform: translate3d(0, 0, 0);
     }
-    /* If you just right, the number with a minus in front -850px */
     to {
-      transform: translate3d(850px, 0px, 0px);
+      transform: translate3d(80%, 0, 0);
     }
   }
 
   #moon {
-    animation: moon 60s infinite linear;
+    animation: 20s cloud infinite alternate ease-in-out;
   }
 
   @keyframes moon {
     from {
-      transform: translate3d(0px, 0px, 0px);
+      transform: translate3d(0, 0, 0);
     }
-    /* If you just right, the number with a minus in front -850px */
     to {
-      transform: translate3d(850px, 0px, 0px);
+      transform: translate3d(80%, 0, 0);
     }
   }
 
   #stars {
-    animation: stars 60s infinite linear;
+    animation: 10s cloud infinite alternate ease-in-out;
   }
 
   @keyframes stars {
     from {
-      transform: translate3d(0px, 0px, 0px);
+      transform: translate3d(0, 0, 0);
     }
-    /* If you just right, the number with a minus in front -850px */
     to {
-      transform: translate3d(-850px, 0px, 0px);
+      transform: translate3d(-80%, 0, 0);
     }
   }
 }
