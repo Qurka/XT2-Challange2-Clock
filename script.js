@@ -5,7 +5,7 @@ function realtimeClock() {
   var seconds = rtClock.getSeconds();
 
   // Add AM and PM system
-  var amPm = hours < 24 ? "AM" : "PM";
+  var amPm = hours < 24 ? "PM" : "AM";
 
   // Convert the hours component to 12-hour format
   // hours = hours > 12 ? hours - 12 : hours;
