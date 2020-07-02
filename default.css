@@ -12,6 +12,10 @@ body {
   background-color: white;
 }
 
+html,body {
+  overflow-x: hidden;
+}
+
 .container {
   display: flex;
   justify-content: center;
